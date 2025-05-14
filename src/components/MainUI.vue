@@ -57,14 +57,14 @@ const carrouselLibs = [
             <span v-if="lib.description" class="text-[#b3b3b3] text-[10px]">{{ lib.description }}</span>
             <h2 class="text-white text-lg font-bold mb-4">{{ lib.title }}</h2>
             <div class="flex gap-4 overflow-x-auto scrollbar-hide">
-                <template v-for="(item, index) in carrouselLibs" :key="index">
-                    <div class="w-[150px] h-[200px] flex-shrink-0 overflow-hidden">
+                <template v-for="(item, index) in libraryAside" :key="index">
+                    <div class="w-[160px] h-[220px] flex-shrink-0 overflow-hidden cursor-pointer">
                         <div class="w-full h-[150px]">
                             <img :src="`/covers/cover${index + 1}.png`" alt="Cover"
                                 class="w-full h-full object-cover rounded-lg" />
                         </div>
                         <div class="py-2">
-                            <p v-if="item.description" class="text-[#b3b3b3] text-xs">{{ item.description }}</p>
+                            <p class="text-[#b3b3b3] text-xs">{{ item }} - Daily mix {{ index + 1 }}</p>
                         </div>
                     </div>
                 </template>
